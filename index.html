@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Portfolio</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/1016322984824279244/1372024918585249863/OBMC_Logo.png?ex=68254547&is=6823f3c7&hm=ef34a661ea3d9c1c24e787845861259dcfab52ab03ac54fd9466120d8993fca0&=&format=webp&quality=lossless&width=650&height=650" type="image/jpeg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        text-align: center;
+        font-family: Courier New, monospace;
+        background-image: url(https://media.discordapp.net/attachments/1361587759365619845/1372054540395872358/Screen_Shot_2025-05-14_at_11.34.46_AM.png?ex=682560dd&is=68240f5d&hm=dfc9a041d27742f0b4e336d8f1409080b7911c3a81361d841c8c9b0edd6f4a1e&=&format=webp&quality=lossless&width=1212&height=681);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+    }
+    p{
+        font-size: 20px;
+
+    }
+    
+
+   h1 {
+      margin-top: 10px; /* Reduced space */
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 2.5rem;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+  }
+    .profile-img {
+            width: 310px;
+            height: 220px;
+            border: 5px solid darkblue;
+            border-radius: 15px; /* Rounded image */
+
+}
+h2 {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 35px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+h3{
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto
+}
+
+    footer {
+        color: black;
+    }
+
+    .profile-img {
+        width: 310px;
+        height: 220px;
+        border: 5px solid darkblue;
+    }
+
+    summary {
+        font-size: 2.2em;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .quarter-section {
+        background-color: lightgrey;
+        padding: 10px;
+        margin: 10px auto;
+        width: 90%;
+        max-width: 900px;
+        color: darkblue;
+        text-align: center;
+    }
+
+    .quarter-images {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .image-box img {
+        width: 300px;
+        margin: 10px;
+        text-align: center;
+    }
+    .name {
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    .description {
+        color: gray;
+    }
+    .star-rating {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .star {
+            font-size: 30px;
+            color: lightcyan;
+            cursor: pointer;
+        }
+
+
+    img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+   0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+</style>
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #102E50;">
+    <div class="container-fluid">
+        <img src="https://media.discordapp.net/attachments/1016322984824279244/1372024918585249863/OBMC_Logo.png?ex=68254547&is=6823f3c7&hm=ef34a661ea3d9c1c24e787845861259dcfab52ab03ac54fd9466120d8993fca0&=&format=webp&quality=lossless&width=650&height=650" style="width: 50px;">
+        <br><br>
+
+        <a class="navbar-brand">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navLinks">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About the Us!</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Quarter Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#next">What's Next</a></li>
+                <li class="nav-item"><a class="nav-link" href="#rate">Rate Us</a></li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5 pt-5" id="about">
+    <div class="container mt-5 pt-5" id="about">
+    <h1 style="color: #3D90D7;">Our Online Portfolio</h1>
+    <br>
+    <p><strong>This portfolio shows my project for each quarter of SY 2024–2025. It includes HTML, CSS, Bootstrap, and JavaScript and other fun projects made by these people!</p></strong>
+
+
+<div class="container mt-4 d-flex flex-wrap justify-content-center align-items-start gap-4">
+        <div class="col-md-4 text-center">
+            <img src="https://media.discordapp.net/attachments/1016322984824279244/1372024964139454625/Screenshot_2025-05-12_210336.png?ex=68254552&is=6823f3d2&hm=56d8dea39ea994aba62cb38aaf48d2a29dbc6a84cd58605c7d448d2884383a97&=&format=webp&quality=lossless&width=626&height=441" class="profile-img" alt="Student Image">
+        </div>
+    <div class="col-md-6">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover bg-light">
+            <thead class="table-primary">
+                <tr>
+                    <th colspan="2" class="text-center fw-bold">Profile Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" class="bg-white text-primary">Name:</th>
+                    <td class="bg-white">Ebtisam Al Hazmi(Sammie)</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="bg-white text-primary">Interests/Clubs:</th>
+                    <td class="bg-white">Tiktok, Console games, Listening to Music, Movies</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="bg-white text-primary">Ambition:</th>
+                    <td class="bg-white"><em>"I love to spend time with people who value my time and with my friends who make me happy!"</em></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+ <div class="container mt-4 d-flex flex-wrap justify-content-center align-items-start gap-4">
+        <div class="col-md-4 text-center">
+            <img src="https://media.discordapp.net/attachments/1274796573536030781/1372055239573901453/Screen_Shot_2025-05-14_at_9.14.01_AM.png?ex=68256184&is=68241004&hm=dae08fbb3874fe119dce1652d1f68bba4367e4438ffa4f42f2fa8b7bf545f099&=&format=webp&quality=lossless&width=1159&height=677" class="profile-img" alt="Student Image">
+        </div>
+        <div class="col-md-6">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover bg-light">
+            <thead class="table-primary">
+                <tr>
+                    <th colspan="2" class="text-center fw-bold">Profile Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" class="bg-white text-primary">Name:</th>
+                    <td class="bg-white">Ashlei Reodica (Ash)</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="bg-white text-primary">Interests/Clubs:</th>
+                    <td class="bg-white"> Listening to Music, Movies, playing the guitar, spend time with family or friends</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="bg-white text-primary">Ambition:</th>
+                    <td class="bg-white"><em>"I love to be YOLO"</em></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="container mt-4 d-flex flex-wrap justify-content-center align-items-start gap-4">
+        <div class="col-md-4 text-center">
+            <img src="https://cdn.discordapp.com/attachments/1278263732878708758/1372039881911697460/IMG_2627.png?ex=68255337&is=682401b7&hm=5f0cea5df4aeb379544790271526039a5f3653162b79c640e0c3284a8f5f467e&" class="profile-img" alt="Student Image">
+        </div>
+    <div class="col-md-6">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover bg-light">
+            <thead class="table-primary">
+                <tr>
+                    <th colspan="2" class="text-center fw-bold">Profile Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" class="bg-white text-primary">Name:</th>
+                    <td class="bg-white">Geoffrey Lilagan (Francis)</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="bg-white text-primary">Interests/Clubs:</th>
+                    <td class="bg-white"> Listening to Music, Movies, playing games with my friends and spending time with my loved ones</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="bg-white text-primary">Ambition:</th>
+                    <td class="bg-white"><em>"Livin life on the edge"</em></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="container mt-4 d-flex flex-wrap justify-content-center align-items-start gap-4">
+        <div class="col-md-4 text-center">
+            <img src="https://media.discordapp.net/attachments/1274796573536030781/1372068715805540352/WIN_20250514_12_11_54_Pro.jpg?ex=68256e11&is=68241c91&hm=a4f28c2fdd5f30a1de983979a490802bf28811c09797833757cc493f14a68eca&=&format=webp&width=1138&height=813" class="profile-img" alt="Student Image">
+        </div>
+         <div class="col-md-6">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover bg-light">
+            <thead class="table-primary">
+                <tr>
+                    <th colspan="2" class="text-center fw-bold">Profile Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" class="bg-white text-primary">Name:</th>
+                    <td class="bg-white">Ethan Belsa (Ethanol)</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="bg-white text-primary">Interests/Clubs:</th>
+                    <td class="bg-white">Spending time with my loved ones, Volleyball, and Sleeping.</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="bg-white text-primary">Ambition:</th>
+                    <td class="bg-white"><em>""if your going to hit it, hit it until it breaks"</em></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<br><br>
+
+<h2 style="color: #3D90D7;">Our Online Portfolio</h2>
+<br>
+
+<details class="quarter-section" id="projects">
+  <summary>1st Quarter</summary>
+  <div class="quarter-images">
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1016322984824279244/1372025992121417748/Screenshot_2025-05-14_074932.png?ex=68254647&is=6823f4c7&hm=d1688f445c113ad6f894e1b9f9d847a2a3ed153379a9723a92e80e0181f13946&=&format=webp&quality=lossless&width=1510&height=677">
+      <div class="name">Ebtisam Al Hazmi</div>
+      <div class="description">Cute Plushies</div>
+    </div>
+
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1163103295917785089/1371799302137184398/image.png?ex=68247328&is=682321a8&hm=71000544d3806ab5044c067157f0b8e28966a321ef2e192111fab7741d956ad6&=&format=webp&quality=lossless&width=1536&height=864"9>
+      <div class="name">Ethan Belsa</div>
+      <div class="description">Urban night lights</div>
+    </div>
+
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1278263732878708758/1371801501332144148/image.png?ex=68247534&is=682323b4&hm=c6972da27ff9c2c3ed281b0780a845bfe32e976ebc8c67dcb5ef016b5d13d9a4&=&format=webp&quality=lossless&width=1687&height=864">
+      <div class="name">Ashlei Reodica</div>
+      <div class="description">Funko Pop</div>
+    </div>
+
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1163293491040882759/1371797589132968038/image.png?ex=68247190&is=68232010&hm=e673e25854a4892166cb649477ce27598d16b12684071deaf811e8a66806faed&=&format=webp&quality=lossless&width=1846&height=864">
+      <div class="name">Francis Lilagan</div>
+      <div class="description">Clothing Brand</div>
+    </div>
+
+  </div>
+</details>
+
+<details class="quarter-section">
+  <summary>2nd Quarter</summary>
+  <div class="quarter-images">
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1016322984824279244/1372025991534481488/Screenshot_2025-05-14_074627.png?ex=68254647&is=6823f4c7&hm=7c481453b6e9b43c5d770bf01f05c0693a397dcfc458a8da6fc6639cc6e6f09f&=&format=webp&quality=lossless&width=1345&height=677">
+      <div class="name">Ebtisam Al Hazmi</div>
+      <div class="description">Luna Foods</div>
+    </div>
+
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1163103295917785089/1371795418974781601/image.png?ex=68246f8a&is=68231e0a&hm=345b1a6dc25d1d78a586e1d23d23cd53ce51a8357b98dc69e05f3e383faedfa1&=&format=webp&quality=lossless&width=1811&height=864">
+      <div class="name">Ethan Belsa</div>
+      <div class="description">Yummy Restaurant</div>
+    </div>
+
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1361587759365619845/1371803594738892800/image.png?ex=68247727&is=682325a7&hm=bcdd29ee062f910e4f069b19f1657347d68e91b3e6e141249ba87f3d580d11ce&=&format=webp&quality=lossless&width=1734&height=864">
+      <div class="name">Ashlei Reodica</div>
+      <div class="description">Lutong pang-bahay</div>
+    </div>
+
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1163103295917785089/1371796950038609932/image.png?ex=682470f7&is=68231f77&hm=00d3e83e06a5e925bacf59c34319062598a055d6027e85b636b8bde5a8b74369&=&format=webp&quality=lossless&width=550&height=280">
+      <div class="name">Francis Lilagan</div>
+      <div class="description">KKK for life</div>
+    </div>
+
+  </div>
+</details>
+
+<details class="quarter-section">
+  <summary>3rd Quarter</summary>
+  <div class="quarter-images">
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1361587759365619845/1371802749305622579/image.png?ex=6824765e&is=682324de&hm=b59e6a2e9343391c4a7347939a5d9afeef378f5a1d1ee35ad19c4e3bda9a2915&=&format=webp&quality=lossless&width=1741&height=864">
+      <div class="name">Ebtisam Al Hazmi</div>
+      <div class="description">MRT tickets!</div>
+    </div>
+
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1163103295917785089/1371796606399287326/image.png?ex=682470a5&is=68231f25&hm=8b77582c3b9d723e3c39b50bb02e53436a89d79d4119e6bc1ee209233f1110e3&=&format=webp&quality=lossless&width=1866&height=864">
+      <div class="name">Ethan Belsa</div>
+      <div class="description">Tren Ticket!</div>
+    </div>
+
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1163151511124189355/1371826712920330270/image.png?ex=68248caf&is=68233b2f&hm=11420cc231ab013738a89d23e2708ae39e862432fba5180f5dc3efaf99672c7e&=&format=webp&quality=lossless">
+      <div class="name">Ashlei Reodica</div>
+      <div class="description">MRT ticket</div>
+    </div>
+
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1163103295917785089/1371796273820205148/image.png?ex=68247056&is=68231ed6&hm=1de12e5dad1b1079da7a09b77a86c2435d1ccdf3c7433d5004840cbd20aac6b3&=&format=webp&quality=lossless&width=550&height=273">
+      <div class="name">Francis Lilagan</div>
+      <div class="description">Trin Tickits!</div>
+    </div>
+
+  </div>
+</details>
+
+<details class="quarter-section">
+  <summary>4th Quarter</summary>
+  <div class="quarter-images">
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1016322984824279244/1372025991060389888/Screenshot_2025-05-14_074159.png?ex=68254647&is=6823f4c7&hm=57aa3ebf16b7363fac001318e6f58ee4469af0a60167101e9ec62a881296422b&=&format=webp&quality=lossless&width=1534&height=677">
+      <div class="name">Ebtisam Al Hazmi</div>
+      <div class="description">BMI Cal</div>
+    </div>
+
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1163103295917785089/1371793395051270194/image.png?ex=68246da8&is=68231c28&hm=44e54a898a27bb2099f4eb79fa807b3737595a5ade10273e24488a995dff12c2&=&format=webp&quality=lossless&width=1813&height=863">
+      <div class="name">Ethan Belsa</div>
+      <div class="description">BMI Calc?</div>
+    </div>
+
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1274796573536030781/1372055238420201492/Screen_Shot_2025-05-14_at_9.29.40_AM.png?ex=68256184&is=68241004&hm=a5544a0dc10643f979ed3963797dd8f86943bd341066d3d06a6972bb47c647e6&=&format=webp&quality=lossless&width=1203&height=677">
+      <div class="name">Ashlei Reodica</div>
+      <div class="description">BMI Calculator</div>
+    </div>
+
+    <div class="image-box">
+      <img src="https://media.discordapp.net/attachments/1163103295917785089/1371795323919401041/image.png?ex=68246f73&is=68231df3&hm=09a84824421a573297a8c240bb8efa78a06d364b57837d58b60fadb00c57576b&=&format=webp&quality=lossless&width=1745&height=864">
+      <div class="name">Francis Lilagan</div>
+      <div class="description">BMI Microwave</div>
+    </div>
+
+  </div>
+</details>
+
+<br><br><br><br>
+
+<div class="container" id="next">
+    <h2 style="color: #3D90D7;">What's Next?</h2>
+    <br>
+    <p> <strong> Sam </strong> - Next year, I look forward to learning more about web development and building interactive websites using JavaScript frameworks. We look fordward to improve and make new and fun codes for our class and friends !!!</p>
+    <p> <strong> Ethan </strong>- I want to help imrpove the skills i need for ICT coding and hope to create good coding!</p>
+    <p> <strong> Ashlei </strong>- I love making projects with my friends and help them in creating project that makes people lives fun and happy</p>
+    <p> <strong> Francis </strong> - I like to be present in the moment as my friends strive to build amazing projects and I wish to help them along the journey to success!</p>
+</div>
+
+<br><br>
+
+
+<div class="container mt-5" id="rate">
+  <h2 style="color: #3D90D7;">Rate Us for Content</h2>
+  <div class="star-rating" id="contentStars">
+    <span class="star" onclick="setRating('content', 1)">&#9733;</span>
+    <span class="star" onclick="setRating('content', 2)">&#9733;</span>
+    <span class="star" onclick="setRating('content', 3)">&#9733;</span>
+    <span class="star" onclick="setRating('content', 4)">&#9733;</span>
+    <span class="star" onclick="setRating('content', 5)">&#9733;</span>
+  </div>
+  <p id="contentRatingResult">Your rating: 0</p>
+
+  <h2 style="color: #3D90D7;">Rate Us for Website</h2>
+  <div class="star-rating" id="websiteStars">
+    <span class="star" onclick="setRating('website', 1)">&#9733;</span>
+    <span class="star" onclick="setRating('website', 2)">&#9733;</span>
+    <span class="star" onclick="setRating('website', 3)">&#9733;</span>
+    <span class="star" onclick="setRating('website', 4)">&#9733;</span>
+    <span class="star" onclick="setRating('website', 5)">&#9733;</span>
+  </div>
+  <p id="websiteRatingResult">Your rating: 0</p>
+
+  <h4 id="averageRating">Average rating: 0</h4>
+  <br><br>
+
+  <p>Let us know what you think about our Portfolio!</p>
+  <form onsubmit="submitFeedback(event)">
+    <div class="mb-3">
+      <textarea class="form-control" rows="4" placeholder="Type your feedback here..." style="max-width: 600px; margin: auto;"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Comment</button>
+  </form>
+</div>
+
+<br><br><br>
+<br><br><br>
+
+<footer>
+    <p>Fairview Campus</p>
+    <p>Made by Al Hazmi, Belsa, Lilagan, Reodica</p>
+</footer>
+
+<script>
+  let contentRating = 0;
+  let websiteRating = 0;
+
+  function setRating(type, rating) {
+    if (type === 'content') {
+      contentRating = rating;
+      updateStars('contentStars', rating);
+      document.getElementById('contentRatingResult').textContent = "Your rating: " + rating;
+    } else {
+      websiteRating = rating;
+      updateStars('websiteStars', rating);
+      document.getElementById('websiteRatingResult').textContent = "Your rating: " + rating;
+    }
+    updateAverage();
+  }
+
+  function updateStars(containerId, rating) {
+    const stars = document.getElementById(containerId).children;
+    for (let i = 0; i < stars.length; i++) {
+      stars[i].classList.toggle('checked', i < rating);
+    }
+  }
+
+  function updateAverage() {
+    const average = ((contentRating + websiteRating) / 2).toFixed(1);
+    document.getElementById('averageRating').textContent = "Average rating: " + (contentRating && websiteRating ? average : 0);
+  }
+
+  function submitFeedback(event) {
+    event.preventDefault();
+    alert("Thank you for your feedback!");
+  }
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
